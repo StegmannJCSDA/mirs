@@ -10,11 +10,11 @@ list(APPEND SFR_C_FILES
 
 include(AddApp)
 add_library(sfr_fort STATIC ${SFR_FORT_FILES})
-addapp_std(sfr ${SFR_C_FILES})
-target_link_libraries(sfr sfr_fort HDF-EOS2::HDF-EOS2 HDF4::HDF4 HDF4::HDF4DF JPEG::JPEG ZLIB::ZLIB hdf5::hdf5-shared)
-target_include_directories(sfr PRIVATE
-	$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/d_fun>
-	)
+#addapp_std(sfr ${SFR_C_FILES})
+#target_link_libraries(sfr sfr_fort HDF-EOS2::HDF-EOS2 HDF4::HDF4 HDF4::HDF4DF JPEG::JPEG ZLIB::ZLIB hdf5::hdf5-shared)
+#target_include_directories(sfr PRIVATE
+#	$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/d_fun>
+#	)
 if(CMAKE_Fortran_COMPILER_ID MATCHES GNU)
 	if (WIN32)
 		target_compile_options(sfr_fort PRIVATE /fimplicit=none)

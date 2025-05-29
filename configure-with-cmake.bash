@@ -91,7 +91,7 @@ echo "FC is `which $FC`"
 echo -e "\n\n\nDo you have any hints regarding where various libraries are located?\nThese are all optional.\n"
 
 # Find HDF5
-HDF5_HINT=/data/starfs1/libs/hdf5-1.8.19-gfortran
+HDF5_HINT=/usr/local/other/wrfDeps/Intel-2021.4.0/
 HOST=`hostname -f`
 if [ "$HOST" == "rhw1134.star1.nesdis.noaa.gov" ]; then
     HDF5_HINT=/data/starfs1_rw/libs/hdf5-1.8.13
@@ -103,7 +103,7 @@ if [ -z "$HDF5_ROOT" ]; then
 fi
 
 # Find NetCDF
-NETCDF4_HINT=/data/starfs1_rw/libs/netcdf-4.5.0
+NETCDF4_HINT=/usr/local/other/wrfDeps/Intel-2021.4.0/
 if [ "$HOST" == "rhw1134.star1.nesdis.noaa.gov" ]; then
     NETCDF4_HINT=/data/starfs1_rw/libs/netcdf-4.3.2
 fi
@@ -130,7 +130,7 @@ if [ -z "$JPEG_ROOT" ]; then
 fi
 
 # Find ZLIB
-ZLIB_HINT=/data/starfs1/libs/zlib-1.2.11
+ZLIB_HINT=/gpfsm/dswdev/jcsda/spack-stack/scu17/spack-stack-1.9.0/envs/ue-intel-2021.10.0/install/intel/2021.10.0/zlib-ng-2.2.1-f37hdv4/
 echo -e "\nZLIB [$ZLIB_HINT]: "
 read ZLIB_ROOT
 if [ -z "$ZLIB_ROOT" ]; then
@@ -138,7 +138,7 @@ if [ -z "$ZLIB_ROOT" ]; then
 fi
 
 # Find HDF4
-HDF4_HINT=/data/starfs1/libs/hdf-4.2.7
+HDF4_HINT=/gpfsm/dswdev/jcsda/spack-stack/scu17/spack-stack-1.9.0/envs/ue-intel-2021.10.0/install/intel/2021.10.0/hdf-4.2.15-lvzjl7h/
 echo -e "\nHDF4 [$HDF4_HINT]: "
 read HDF4_ROOT
 if [ -z "$HDF4_ROOT" ]; then
@@ -146,7 +146,7 @@ if [ -z "$HDF4_ROOT" ]; then
 fi
 
 # Find HDF-EOS
-HDFEOS_HINT=/data/starfs1/libs/hdfeos
+HDFEOS_HINT=/gpfsm/dswdev/jcsda/spack-stack/scu17/spack-stack-1.9.0/envs/ue-intel-2021.10.0/install/intel/2021.10.0/hdf-eos2-2.20v1.00-2hussws/
 echo -e "\nHDF-EOS [$HDFEOS_HINT]: "
 read HDFEOS_ROOT
 if [ -z "$HDFEOS_ROOT" ]; then

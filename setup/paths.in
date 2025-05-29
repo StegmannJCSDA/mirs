@@ -1,0 +1,102 @@
+#-------------------------------------------------------------------------------
+# This is the place you need change according to your own needs.
+#-------------------------------------------------------------------------------
+MIRS_ROOT   = /discover/nobackup/pstegman/workspace/Fortran_dev/mirs/mirs_v11r10_r111024267/ # /discover/nobackup/projects/hympi/nshahrou/mirs_v11r10_r111024267/
+CRTM_path   = ${MIRS_ROOT}/src/crtm/REL-2.1.1
+lib_path    = ${MIRS_ROOT}/src/lib
+exec_path   = ${MIRS_ROOT}/bin
+
+#-----HDF4 include and lib path(hdf4.2.r4 is required to run FY3)
+HDF4INC     = /data/starfs1/libs/hdf-4.2.16/include
+HDF4LIB     = /data/starfs1/libs/hdf-4.2.16/lib
+
+#-----HDF5 include, lib and bin path
+HDF5INC     = /data/starfs1/libs/hdf5-1.14.3/include
+HDF5LIB     = /data/starfs1/libs/hdf5-1.14.3/lib
+HDF5BIN     = /data/starfs1/libs/hdf5-1.14.3/bin
+
+#-----NETCDF 4 include and lib path
+NETCDF4INC   = /data/starfs1/libs/netcdf-4.9.2/include
+NETCDF4LIB   = /data/starfs1/libs/netcdf-4.9.2/lib
+
+#-----SZIP include and lib path
+SZIPINC      = /data/starfs1/libs/szip-2.1/include
+SZIPLIB      = /data/starfs1/libs/szip-2.1/lib
+
+#-----HDFEOS include and lib path
+HDFEOSINC    = /data/starfs1/libs/hdfeos/include
+HDFEOSLIB    = /data/starfs1/libs/hdfeos/lib/linux
+
+#---JPEG 
+JPEG_DIR = /usr
+JPEGINC = ${JPEG_DIR}/include
+JPEGLIB = ${JPEG_DIR}/lib
+
+#-----ZLIB include and lib path
+ZLIBINC      = /data/starfs1/libs/zlib-1.2.11/include
+ZLIBLIB      = /data/starfs1/libs/zlib-1.2.11/lib
+
+#-----Open MP include and lib path
+OMPINC = /usr/lib/gcc/x86_64-redhat-linux/4.4.4/include
+OMPLIB = /usr/lib/gcc/x86_64-redhat-linux/4.4.4
+ 
+
+#-----Uncomment the following for Linux ifort 
+#convEndOption = -convert big_endian
+#FC_FLGS_SFR = -c \
+#              -O2 \
+#              -free \
+#              -assume byterecl \
+#              ${INCLUDES}
+#PROG_FOR_CMAIN_OPTS = -nofor_main
+
+#-----Uncomment the following for Linux g95
+#convEndOption = -fendian=big
+
+#-----Uncomment the following for linux gfortran
+convEndOption = -fconvert=big-endian
+FC_FLGS_SFR =   -c \
+                -fbounds-check \
+                -fimplicit-none \
+                -ffpe-trap=overflow,zero,invalid \
+                -ffree-form \
+                -fbacktrace \
+                -ggdb \
+                -static \
+                -Wall\
+                ${INCLUDES}
+PROG_FOR_CMAIN_OPTS = 
+
+#-----Uncomment the following if using big_endian machines (SGI, IBM AIX) 
+#convEndOption =
+
+
+
+#-----Uncomment the following for Linux (ifort,g95,gfortran)
+qsaveOption=
+
+#-----Uncomment the following for big_endian machines (SGI, IBM AIX)
+#qsaveOption="-qsave"
+
+
+#---- This is only needed if you want to run Java GUI to generate your own pcf and scs files
+JAVA_HOME=/usr
+
+
+#---- Uncomment the following for linux C compiler gcc
+CC = gcc
+C_FLAGS = -Wall -g
+
+#---- Uncomment the following for IBM AIX C compiler xlc
+#CC = xlc
+#C_FLAGS = -g
+
+
+#-----Uncomment the following for Linux g++
+CXX = g++
+CXX_FLAGS = -Wall -g -fopenmp
+
+#-----Uncomment the following for IBM AIX xlc++
+#CXX = xlc++
+#CXX_FLAGS = -qflag=w -g
+
