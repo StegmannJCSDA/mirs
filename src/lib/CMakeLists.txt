@@ -12,10 +12,11 @@ include(files.cmake)
 add_library(MiRS STATIC ${libmirs_srcs})
 addlib_f(MiRS MiRS)
 add_library(MiRS-f INTERFACE)
-target_link_libraries(MiRS-f INTERFACE MiRS CRTM-f hdf5::hdf5_fortran hdf5::hdf5)
+#target_link_libraries(MiRS-f INTERFACE MiRS CRTM-f hdf5::hdf5_fortran hdf5::hdf5)
+target_link_libraries(MiRS-f INTERFACE MiRS crtm hdf5::hdf5_fortran hdf5::hdf5)
 INSTALL(TARGETS MiRS-f EXPORT MiRSTargets)
 addpack(MiRS-f)
-target_link_libraries(MiRS hdf5::hdf5_fortran hdf5::hdf5 CRTM)
+target_link_libraries(MiRS hdf5::hdf5_fortran hdf5::hdf5 crtm)
 target_include_directories(MiRS INTERFACE
 	$<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>
 	$<BUILD_INTERFACE:${CMAKE_BINARY_DIR}/include/MiRS>

@@ -1,5 +1,6 @@
 if(MIRS_BUILD_FORTRAN)
-	add_subdirectory(crtm/REL-2.1.1)
+	#add_subdirectory(crtm/REL-2.1.1)
+	add_subdirectory(crtm/CRTMv3)
 	add_subdirectory(lib)
 	add_subdirectory(fwd)
 	add_subdirectory(1dvar)

@@ -2,7 +2,8 @@
 # This is the place you need change according to your own needs.
 #-------------------------------------------------------------------------------
 MIRS_ROOT   = /data/data412/pub/sliu/mirs_v11r8
-CRTM_path   = ${MIRS_ROOT}/src/crtm/REL-2.1.1
+#CRTM_path   = ${MIRS_ROOT}/src/crtm/REL-2.1.1
+CRTM_path   = ${MIRS_ROOT}/src/crtm/CRTMv3
 lib_path    = ${MIRS_ROOT}/src/lib
 exec_path   = ${MIRS_ROOT}/bin
 

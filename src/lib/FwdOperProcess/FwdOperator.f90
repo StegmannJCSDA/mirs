@@ -802,6 +802,7 @@ CONTAINS
     REAL, DIMENSION(SIZE(Scene%pres_lay),Ym%nChan) :: trx_lay  
     INTEGER                                        :: ilay,ipol,nLayEff,nLevEff,i
     REAL                                           :: evert,ehorz
+    INTEGER                                   :: n_angles = 1
     REAL(fp), DIMENSION(4)                    :: Emiss4Stokes,Refl4Stokes
     REAL(fp), PARAMETER                       :: salinity=33.0 !ppt
     REAL(fp), PARAMETER                       :: azu=-999.0
@@ -841,7 +842,7 @@ CONTAINS
           !--Setup Fastem5 inputs
           angle = Ym%angle(ichan)
           freq  = Ym%CentrFreq(ichan)
-          CALL Compute_FastemX(MWwaterCoeff,freq,angle,tskin,salinity,windsp,ivar,Emiss4Stokes,Refl4Stokes,azu,trx)
+          CALL Compute_FastemX(MWwaterCoeff,freq,n_angles,angle,tskin,salinity,windsp,ivar,Emiss4Stokes,Refl4Stokes,azu,trx)
           evert             = Emiss4Stokes(1)
           ehorz             = Emiss4Stokes(2)
           ipol              = Ym%polar(ichan)

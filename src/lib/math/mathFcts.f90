@@ -25,7 +25,7 @@
 
 MODULE MathFcts
   USE ErrorHandling
-  USE type_kinds
+  USE Type_Kinds
   IMPLICIT NONE
   PRIVATE
   !---Publicly available subroutine
@@ -224,18 +224,18 @@ CONTAINS
       IMPLICIT NONE
 
 ! ... Parameters ...
-      REAL(DOUBLE), PARAMETER :: SQRT2 = 1.4142135623730950488
-      REAL(DOUBLE), PARAMETER :: TWOPI = 6.2831853071795864769 
+      REAL(Double), PARAMETER :: SQRT2 = 1.4142135623730950488
+      REAL(Double), PARAMETER :: TWOPI = 6.2831853071795864769 
 
 ! ... Scalar arguments ...
       INTEGER(LONG), INTENT(IN) :: N, M
 ! ... Array arguments ...
-      REAL(DOUBLE), INTENT(INOUT) ::  X(N)
+      REAL(Double), INTENT(INOUT) ::  X(N)
 ! ... Local scalars ...
       INTEGER(LONG)  J, I, K, IS, ID, I0, I1, I2, I3, I4, I5, I6, I7, I8
       INTEGER(LONG)  N1, N2, N4, N8
-      REAL(DOUBLE)  XT, R1, T1, T2, T3, T4, T5, T6
-      REAL(DOUBLE)  A, A3, E, CC1, SS1, CC3, SS3
+      REAL(Double)  XT, R1, T1, T2, T3, T4, T5, T6
+      REAL(Double)  A, A3, E, CC1, SS1, CC3, SS3
 !
 ! ... Exe. statements ...
 !
@@ -384,18 +384,18 @@ END SUBROUTINE SFFTCF
       IMPLICIT NONE
 
 ! ... Parameters ...
-      REAL(DOUBLE), PARAMETER :: SQRT2 = 1.4142135623730950488
-      REAL(DOUBLE), PARAMETER :: TWOPI = 6.2831853071795864769 
+REAL(Double), PARAMETER :: SQRT2 = 1.4142135623730950488
+REAL(Double), PARAMETER :: TWOPI = 6.2831853071795864769 
 
 ! ... Scalar arguments ...
       INTEGER(LONG), INTENT(IN) :: N, M
 ! ... Array arguments ...
-      REAL(DOUBLE), INTENT(INOUT) ::  X(N)
+REAL(Double), INTENT(INOUT) ::  X(N)
 ! ... Local scalars ...
       INTEGER(LONG)  J, I, K, IS, ID, I0, I1, I2, I3, I4, I5, I6, I7, I8
       INTEGER(LONG)  N1, N2, N4, N8
-      REAL(DOUBLE)  XT, R1, T1, T2, T3, T4, T5
-      REAL(DOUBLE)  A, A3, E, CC1, SS1, CC3, SS3
+      REAL(Double)  XT, R1, T1, T2, T3, T4, T5
+      REAL(Double)  A, A3, E, CC1, SS1, CC3, SS3
 !
 ! ... Exe. statements ...
 !

@@ -4,7 +4,7 @@
 # does not provide this version, you can get it from
 # https://cmake.org/download/
 
-cmake_minimum_required (VERSION 3.1)
+cmake_minimum_required (VERSION 3.12)
 cmake_policy(SET CMP0074 OLD)
 cmake_policy(SET CMP0076 OLD)
 
