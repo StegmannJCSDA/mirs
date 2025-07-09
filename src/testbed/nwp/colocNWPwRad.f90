@@ -65,7 +65,7 @@ program colocNWPwRad
   INTEGER            :: iu_listrad=20,iu_listnwpsfc=30,iu_listnwpatm=40
   INTEGER            :: nvarSfc,nvarAtm,nAnalys2use,nLay,nLev,sfcTypeIdx
   INTEGER, PARAMETER :: len=256
-  INTEGER, PARAMETER :: nlat=181,nlon=360
+  INTEGER, PARAMETER :: nlat=721,nlon=1440
   REAL,    PARAMETER :: minLatNWP=-90,maxLatNWP=90,minLonNWP=0,maxLonNWP=359
   INTEGER, PARAMETER :: nAbsorb=2
   INTEGER            :: nqc=1
